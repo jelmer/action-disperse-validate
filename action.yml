@@ -1,0 +1,16 @@
+name: "disperse-validate"
+branding:
+  color: red
+  icon: package
+description: >
+  Validate a disperse config
+inputs:
+  path:
+    description: >
+      Set disperse file path to check
+    required: false
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.path }}
