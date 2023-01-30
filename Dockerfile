@@ -1,6 +1,6 @@
-FROM debian:sid
+FROM debian:sid-slim
 
-RUN apt -y update && apt -y install python3-pip protobuf-compiler
+RUN apt -y update && apt -y install --no-install-recommends python3-pip protobuf-compiler
 RUN pip3 install disperse
 
 COPY entrypoint.sh /entrypoint.sh
