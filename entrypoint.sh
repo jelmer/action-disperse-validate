@@ -5,9 +5,9 @@ set -euo pipefail
 set -x
 
 if [ -z "$1" ]; then
-    PATH=.
+    CONFIG_PATH=.
 else
-    PATH="${1}"
+    CONFIG_PATH="${1}"
 fi
 
-PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python disperse validate "${PATH}"
+PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python disperse validate "${CONFIG_PATH}"
