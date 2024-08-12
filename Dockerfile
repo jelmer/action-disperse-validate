@@ -6,7 +6,7 @@ RUN cargo install --locked --bin disperse disperse
 
 FROM debian:testing-slim
 
-RUN apt -y update && apt -y install --no-install-recommends ca-certificates python3 python3-breezy
+RUN apt -y update && apt -y install --no-install-recommends ca-certificates python3-all python3-breezy
 COPY --from=build /root/.cargo/bin/disperse /usr/local/bin/disperse
 
 COPY entrypoint.sh /entrypoint.sh
