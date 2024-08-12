@@ -10,4 +10,4 @@ else
     CONFIG_PATH="${1}"
 fi
 
-PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python disperse validate "${CONFIG_PATH}"
+disperse validate "${CONFIG_PATH}"
