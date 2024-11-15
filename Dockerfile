@@ -2,7 +2,7 @@ FROM debian:testing-slim AS build
 
 RUN apt -y update && apt -y install --no-install-recommends protobuf-compiler build-essential rustc cargo ca-certificates python3-all-dev libssl-dev pkg-config
 
-RUN cargo install --locked --bin disperse disperse
+RUN cargo install --bin disperse disperse
 
 FROM debian:testing-slim
 
