@@ -1,6 +1,6 @@
 FROM debian:testing-slim AS build
 
-RUN apt -y update && apt -y install --no-install-recommends protobuf-compiler build-essential rustc cargo ca-certificates python3-all-dev libssl-dev pkg-config
+RUN apt -y update && apt -y install --no-install-recommends protobuf-compiler build-essential rustc cargo ca-certificates python3-all-dev libssl-dev pkg-config git
 
 RUN CARGO_NET_GIT_FETCH_WITH_CLI=true cargo install --bin disperse --git https://github.com/jelmer/disperse
 
