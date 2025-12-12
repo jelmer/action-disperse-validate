@@ -11,6 +11,6 @@ inputs:
     required: false
 runs:
   using: 'docker'
-  image: 'Dockerfile'
+  image: 'docker://ghcr.io/jelmer/action-disperse-validate:master'
   args:
     - ${{ inputs.path }}
